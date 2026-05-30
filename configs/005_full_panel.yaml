@@ -1,0 +1,11 @@
+step: 005
+name: full_panel_network_scale
+mode: full
+policy: pilot_validated_then_scale_once
+raw_vendor_data_policy: local_only_gitignored_never_bundled
+outputs:
+  local_full_core: data/interim/005_full_core
+  local_full_panel: data/processed/005_full_panel
+  safe_logs: artifacts/logs
+  safe_tables: artifacts/tables
+  safe_figures: artifacts/figures_static and artifacts/figures_interactive

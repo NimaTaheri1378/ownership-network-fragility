@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: Filing-Date-Clean Ownership Network Fragility
+message: If you use this repository, please cite it as below.
+type: software
+authors:
+  - name: Research project
+repository-code: https://github.com/
+abstract: Point-in-time institutional ownership network fragility asset-pricing pipeline.
+license: MIT
+version: 0.1.0

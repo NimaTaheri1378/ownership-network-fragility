@@ -1,0 +1,27 @@
+model:
+  name: "lightgbm_rank_ic_baseline"
+  objective: "regression"
+  primary_metric: "monthly_spearman_rank_ic"
+
+validation:
+  scheme: "expanding_window"
+  validation_months: 24
+  test_months: 12
+  embargo_months: 1
+
+compute:
+  n_jobs: 32
+  device_type: "cpu"
+  gpu_enabled_future_option: true
+
+hyperparameters:
+  learning_rate: 0.03
+  num_leaves: 63
+  min_data_in_leaf: 200
+  feature_fraction: 0.85
+  bagging_fraction: 0.85
+  bagging_freq: 1
+  lambda_l1: 0.0
+  lambda_l2: 1.0
+  num_boost_round: 2000
+  early_stopping_rounds: 100

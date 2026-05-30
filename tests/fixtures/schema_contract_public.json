@@ -1,0 +1,29 @@
+{
+  "metadata_only": true,
+  "data_policy": {
+    "no_vendor_data_rows": true,
+    "public_fixture": true
+  },
+  "source_roles": {
+    "13f_holdings": {
+      "library": "tr_13f",
+      "table": "holdings_metadata_placeholder",
+      "role": "13f_holdings"
+    },
+    "crsp_monthly_stock": {
+      "library": "crsp_a_stock",
+      "table": "monthly_stock_metadata_placeholder",
+      "role": "crsp_monthly_stock"
+    },
+    "crsp_daily_stock": {
+      "library": "crsp_a_stock",
+      "table": "daily_stock_metadata_placeholder",
+      "role": "crsp_daily_stock"
+    },
+    "crsp_stock_names": {
+      "library": "crsp_a_stock",
+      "table": "stock_names_metadata_placeholder",
+      "role": "crsp_stock_names"
+    }
+  }
+}

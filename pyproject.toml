@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ownership-network-fragility"
+version = "0.0.1"
+description = "Filing-date-clean institutional ownership network fragility pipeline."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Research project"}]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "pyarrow",
+    "duckdb",
+    "polars",
+    "wrds",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "networkx",
+    "scikit-learn",
+    "statsmodels",
+    "linearmodels",
+    "lightgbm",
+    "xgboost",
+    "matplotlib",
+    "plotly",
+    "pyyaml",
+    "tqdm",
+    "joblib",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

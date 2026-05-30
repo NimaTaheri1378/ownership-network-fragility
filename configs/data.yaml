@@ -1,0 +1,37 @@
+project:
+  title: "Filing-Date-Clean Ownership Network Fragility"
+  slug: "ownership-network-fragility"
+
+paths:
+  raw_data: "data/raw"
+  interim_data: "data/interim"
+  processed_data: "data/processed"
+  external_data: "data/external"
+  artifacts: "artifacts"
+  logs: "logs"
+
+compute:
+  n_jobs_env_var: "ONF_N_JOBS"
+  default_n_jobs: 32
+  memory_budget_gb: 200
+  gpu_count: 2
+  policy: "pilot_validate_scale_once"
+
+wrds:
+  username_env_var: "WRDS_USERNAME"
+  candidate_libraries:
+    - tr_13f
+    - tfn
+    - crsp_a_stock
+    - crsp
+    - crsp_a_ccm
+    - comp
+    - ff_all
+    - crsp_q_mutualfunds
+    - tr_mutualfunds
+
+schema_discovery:
+  pilot_tables_per_library: 5
+  full_tables_per_library: 80
+  table_name_regex: "(13f|s34|hold|holding|mgr|manager|fil|form|cusip|type|msf|dsf|msenames|stocknames|ccm|link|factor|port|fund|mflink)"
+  metadata_only: true

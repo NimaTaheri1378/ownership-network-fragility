@@ -1,0 +1,5 @@
+model,rank IC,IC t,gross HML,net25 return,net25 Sharpe,factor alpha,alpha t
+ridge_all,0.0715,9.72,21.25%,7.88%,0.795,8.47%,3.05
+lgbm_all,0.0395,7.39,16.58%,4.71%,0.647,5.21%,2.97
+lgbm_no_network,0.0462,8.69,16.81%,4.86%,0.543,4.54%,1.92
+lgbm_network_pressure,0.0228,2.80,4.65%,-1.29%,-0.209,-1.33%,-0.80

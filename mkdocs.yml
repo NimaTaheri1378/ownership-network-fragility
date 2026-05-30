@@ -1,0 +1,21 @@
+site_name: Filing-Date-Clean Ownership Network Fragility
+site_description: Point-in-time institutional ownership network fragility asset-pricing project
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+nav:
+  - Home: index.md
+  - Methodology: methodology.md
+  - Results: results.md
+  - Robustness: robustness.md
+  - Reproducibility: reproducibility.md
+  - Model Card: model_card.md
+  - Release Checklist: github_release_checklist.md
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.superfences
+  - pymdownx.highlight

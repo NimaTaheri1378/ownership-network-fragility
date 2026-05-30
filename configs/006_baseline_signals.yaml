@@ -1,0 +1,21 @@
+step: 006
+name: baseline_signal_tests
+mode: full_panel_aggregate_only
+input_dependency: latest successful 005_full_panel_manifest_*.json
+raw_vendor_data_policy: local_only_gitignored_never_bundled
+method:
+  frequency: monthly
+  tests:
+    - decile_sorts
+    - high_minus_low_spreads
+    - monthly_spearman_rank_ic
+    - feature_correlation_audit
+  horizons:
+    - fwd_ret_1m
+    - fwd_ret_3m
+outputs:
+  local_input_panel: data/processed/005_full_panel/<run_id>/stock_month_network_panel.parquet
+  local_derived_dir: data/processed/006_baseline_signals
+  safe_logs: artifacts/logs
+  safe_tables: artifacts/tables
+  safe_figures: artifacts/figures_static and artifacts/figures_interactive

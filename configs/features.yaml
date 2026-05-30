@@ -1,0 +1,24 @@
+timing:
+  signal_date: "public_filing_availability_date"
+  rebalance_frequency: "monthly"
+  no_trade_before_public_filing: true
+
+universe:
+  common_stock_only: true
+  exclude_etfs: true
+  exclude_options_warrants_convertibles_preferreds: true
+  price_floor: 5.0
+  include_delisting_returns: true
+
+network:
+  manager_stock_matrix: "sparse_csr"
+  overlap_graph: "W_transpose_phi_W"
+  baseline_manager_weighting: "equal_manager"
+  alternatives:
+    - concentration_weighted
+    - inverse_breadth_weighted
+    - instability_weighted
+
+labels:
+  forward_return_horizons_trading_days: [21, 63]
+  downside_label: "bottom_decile_forward_return"

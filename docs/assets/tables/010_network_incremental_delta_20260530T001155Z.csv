@@ -1,0 +1,3 @@
+target,comparison,delta_net25_annualized_mean_return,delta_net25_sharpe,delta_net25_cumulative_return
+fwd_ret_1m,lgbm_all_minus_lgbm_no_network,-0.001456241113765501,0.10380784640580754,-0.0010301493962934227
+fwd_ret_3m,lgbm_all_minus_lgbm_no_network,-0.007045673837057002,0.18889026205170223,-1.0440073743199694
